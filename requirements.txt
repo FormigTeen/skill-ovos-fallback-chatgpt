@@ -1,4 +1,5 @@
-ovos-solver-openai-persona-plugin
 ovos-utils~=0.0, >=0.0.28
 ovos_workshop~=0.0, >=0.0.11
 ovos-plugin-manager~=0.0, >=0.0.23a13
+ovos-config
+git+https://github.com/FormigTeen/ovos-solver-plugin-openai-persona.git

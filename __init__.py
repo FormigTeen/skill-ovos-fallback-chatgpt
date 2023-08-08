@@ -1,5 +1,6 @@
 from ovos_solver_openai_persona import OpenAIPersonaSolver
 from ovos_solver_openai_persona.prompts import OpenAIPersonaPromptSolver
+from ovos_config import Configuration
 from ovos_utils import classproperty
 from ovos_utils.log import LOG
 from ovos_utils.process_utils import RuntimeRequirements
@@ -28,8 +29,11 @@ class ChatGPTSkill(FallbackSkill):
     def initialize(self):
         chat_engines = ["gpt-3.5-turbo"]
         text_completions = ["ada", "babbage", "curie", "davinci",
-                            "text-davinci-002", "text-davinci-003"]
+        "text-davinci-002", "text-davinci-003"]
         code_completions = ["code-cushman-001", "code-davinci-002"]
+
+        self.settings = Configuration().get('custom', {}).get('chat_gpt', {})
+
         engine = self.settings.get("model", "gpt-3.5-turbo")
         if engine in chat_engines:
             self._chat = OpenAIPersonaSolver(config=self.settings)
