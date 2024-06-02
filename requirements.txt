@@ -1,6 +1,5 @@
 ovos-utils
 ovos_workshop
 ovos-plugin-manager
-ovos-translate-server-plugin
 openai
 ovos_config
