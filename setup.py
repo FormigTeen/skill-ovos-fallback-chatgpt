@@ -4,9 +4,9 @@ import os
 from os import walk, path
 
 
-PYPI_NAME = "skill-ovos-fallback-chatgpt"  # pip install PYPI_NAME
-URL = f"https://github.com/OpenVoiceOS/{PYPI_NAME}"
-SKILL_CLAZZ = "ChatGPTSkill"  # needs to match __init__.py class name
+PYPI_NAME = "skill-ovos-fallback-openai-assistant"  # pip install PYPI_NAME
+URL = f"https://github.com/FormigTeen/{PYPI_NAME}"
+SKILL_CLAZZ = "OpenAIAssistantSkill"  # needs to match __init__.py class name
 
 
 # below derived from github url to ensure standard skill_id
@@ -74,7 +74,7 @@ def get_version():
 setup(
     name=PYPI_NAME,
     version=get_version(),
-    description='ovos chatGPT skill',
+    description='ovos OpenAI Assistant skill',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=URL,
