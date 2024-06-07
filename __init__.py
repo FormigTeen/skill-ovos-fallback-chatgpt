@@ -16,6 +16,7 @@ class ChatGPTSkill(FallbackSkill):
         )
 
     def initialize(self):
+        print("Fallback ChatGPT STarted")
         self.add_event("speak", self.handle_speak)
         self.add_event("recognizer_loop:utterance", self.handle_utterance)
         self.register_fallback(self.ask_chatgpt, 85)
